@@ -14,6 +14,22 @@
     .media-item{margin:0;background:#fff;border:1px solid #dfe5ea;border-radius:6px;overflow:hidden}
     .media-item img,.media-item video{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:#071b34}
     .media-item figcaption{padding:16px 18px;color:#162231;font-size:14px;font-weight:700}
+    .roof-showcase{background:#f6f8fa}
+    .showcase-heading{max-width:720px;margin-bottom:36px}
+    .roof-feature{display:grid;grid-template-columns:1.06fr .94fr;gap:22px;margin-bottom:22px}
+    .roof-feature-card,.roof-card{margin:0;background:#fff;border:1px solid #dfe5ea;border-radius:6px;overflow:hidden}
+    .roof-feature-card img{width:100%;height:100%;min-height:390px;object-fit:cover;display:block}
+    .roof-feature-copy{padding:42px;display:flex;flex-direction:column;justify-content:center;background:#071b34;color:#fff}
+    .roof-feature-copy h3{font-family:'Playfair Display',serif;font-size:34px;line-height:1.2;margin:12px 0}
+    .roof-feature-copy p{color:#d6e0e7;margin:0;max-width:430px}
+    .roof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .roof-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+    .roof-card figcaption{padding:14px 16px;color:#162231;font-size:14px;font-weight:700}
+    .roof-card figcaption span{display:block;font-size:12px;line-height:1.45;font-weight:500;color:#637083;margin-top:4px}
+    .roof-card.wide{grid-column:span 2}
+    .roof-card.wide img{aspect-ratio:16/8}
+    @media(max-width:850px){.roof-feature{grid-template-columns:1fr}.roof-feature-card img{min-height:330px}.roof-grid{grid-template-columns:repeat(2,minmax(0,1fr)}}
+    @media(max-width:560px){.roof-grid{grid-template-columns:1fr}.roof-card.wide{grid-column:auto}.roof-feature-copy{padding:28px}.roof-feature-copy h3{font-size:29px}}
     @media(max-width:650px){.media-grid{grid-template-columns:1fr}}
   </style>
 </head>
@@ -32,6 +48,26 @@
       <div class="container intro-grid">
         <div><div class="eyebrow">TÔN NHỰA PVC/ASA CAO CẤP</div><h2>Thách thức mọi thời tiết.</h2><p class="lead">Hệ tôn nhựa ngói PVC/ASA được phát triển cho điều kiện khí hậu nóng ẩm: cách nhiệt tốt, chống tia UV, chống ăn mòn và giữ màu ổn định.</p><ul class="unit-list"><li>Chống nóng và giảm tiếng ồn</li><li>Kháng hóa chất, phù hợp vùng ven biển</li><li>Độ bền sử dụng lên đến 50 năm</li><li>Bảo hành sản phẩm đến 20 năm</li></ul><a class="btn" href="lien-he.html">Nhận báo giá PVC/ASA</a></div>
         <div class="image-frame"><img alt="Tôn nhựa PVC ASA Luxury Prime" src="assets/luxury-prime-asa-hero.jpg"></div>
+      </div>
+    </section>
+    <section class="roof-showcase">
+      <div class="container">
+        <div class="showcase-heading"><div class="eyebrow">Mẫu mái ngói thực tế</div><h2>Đa dạng màu sắc, đồng bộ từng chi tiết</h2><p class="lead">Khám phá các màu sắc và kiểu dáng tôn ngói nhựa PVC/ASA Luxury Prime, phù hợp từ biệt thự, nhà ở đến công trình mang phong cách truyền thống.</p></div>
+        <div class="roof-feature">
+          <figure class="roof-feature-card"><img loading="lazy" src="assets/luxury-prime-bang-mau-ngoi.jpg" alt="Bảng màu tôn ngói nhựa PVC ASA"></figure>
+          <div class="roof-feature-copy"><div class="eyebrow">Bảng màu tiêu chuẩn</div><h3>Chọn màu hài hòa với công trình</h3><p>Các lựa chọn gồm socola, xám, đỏ ngói, xanh tím, xanh rêu, xanh dương và đỏ đậm. Màu thực tế có thể được đối chiếu trước khi chốt đơn hàng.</p></div>
+        </div>
+        <div class="roof-grid">
+          <figure class="roof-card"><img loading="lazy" src="assets/luxury-prime-ngoi-xanh.jpg" alt="Mái ngói nhựa màu xanh"><figcaption>Mái ngói màu xanh dương<span>Điểm nhấn hiện đại, nổi bật giữa không gian thiên nhiên.</span></figcaption></figure>
+          <figure class="roof-card"><img loading="lazy" src="assets/luxury-prime-ngoi-cafe.jpg" alt="Mái ngói nhựa màu cà phê"><figcaption>Mái ngói màu cà phê<span>Sắc trầm sang trọng, phù hợp nhà vườn và biệt thự.</span></figcaption></figure>
+          <figure class="roof-card"><img loading="lazy" src="assets/luxury-prime-ngoi-do.jpg" alt="Mái ngói nhựa màu đỏ"><figcaption>Mái ngói màu đỏ<span>Tạo vẻ ấm áp, nổi bật cho công trình dân dụng.</span></figcaption></figure>
+          <figure class="roof-card wide"><img loading="lazy" src="assets/luxury-prime-mai-ngoi.jpg" alt="Mái ngói Luxury Prime hoàn thiện"><figcaption>Công trình Luxury Prime hoàn thiện<span>Hệ mái ngói đồng bộ, tạo diện mạo bền đẹp cho ngôi nhà.</span></figcaption></figure>
+          <figure class="roof-card"><img loading="lazy" src="assets/luxury-prime-ngoi-tim-than.jpg" alt="Mái ngói nhựa màu tím than"><figcaption>Mái ngói tím than<span>Tông màu trang nhã, phù hợp kiến trúc hiện đại.</span></figcaption></figure>
+          <figure class="roof-card"><img loading="lazy" src="assets/luxury-prime-ngoi-am-04.jpg" alt="Mẫu ngói âm dương màu ghi"><figcaption>Mẫu ngói âm dương ghi<span>Kiểu dáng cổ điển, sử dụng phụ kiện trang trí đồng bộ.</span></figcaption></figure>
+          <figure class="roof-card"><img loading="lazy" src="assets/luxury-prime-ngoi-am-03.jpg" alt="Mẫu ngói âm dương đỏ"><figcaption>Mẫu ngói âm dương đỏ<span>Phù hợp không gian sân vườn và kiến trúc truyền thống.</span></figcaption></figure>
+          <figure class="roof-card"><img loading="lazy" src="assets/luxury-prime-ngoi-am-duong.jpg" alt="Ứng dụng ngói âm dương"><figcaption>Ứng dụng ngói âm dương<span>Giải pháp mái cho công trình cảnh quan và không gian trưng bày.</span></figcaption></figure>
+          <figure class="roof-card"><img loading="lazy" src="assets/luxury-prime-ngoi-am.jpg" alt="Mẫu cổng ngói âm dương"><figcaption>Cổng mái ngói âm dương<span>Hoàn thiện đồng bộ cho cổng và tường rào.</span></figcaption></figure>
+        </div>
       </div>
     </section>
     <section>
