@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tấm lợp lấy sáng Composite FRP Luxury Prime - giải pháp vật liệu bền vững cho công trình dân dụng và công nghiệp.">
+  <title>Tấm lợp lấy sáng Composite FRP | HD Luxury</title>
+  <style>
+    :root { --navy:#081d33; --navy-soft:#12375a; --gold:#c7974d; --ink:#10233a; --paper:#f7f5f0; --line:#e4dfd5; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Arial, Helvetica, sans-serif; line-height:1.5; }
+    .site-header { min-height:76px; display:flex; align-items:center; gap:28px; padding:12px max(24px, calc((100% - 1180px)/2)); background:#fff; border-bottom:1px solid #e8e5df; position:sticky; top:0; z-index:10; }
+    .brand { color:var(--navy); display:flex; gap:10px; align-items:center; text-decoration:none; min-width:220px; }
+    .brand-mark { display:grid; place-items:center; width:42px; height:42px; border:2px solid var(--gold); border-radius:50%; font-family:Georgia, serif; font-size:20px; font-weight:700; color:var(--gold); }
+    .brand strong, .brand small { display:block; }
+    .brand strong { font-size:16px; letter-spacing:.4px; }
+    .brand small { margin-top:2px; font-size:9px; letter-spacing:1.25px; color:#657080; }
+    nav { display:flex; flex:1; justify-content:center; gap:24px; }
+    nav a { color:var(--ink); font-size:14px; font-weight:700; text-decoration:none; padding:25px 0 20px; border-bottom:2px solid transparent; }
+    nav a:hover, nav a.active { color:#9a6926; border-bottom-color:var(--gold); }
+    .quote { background:var(--gold); color:#fff; padding:13px 18px; border-radius:4px; text-decoration:none; font-weight:700; white-space:nowrap; }
+    .hero { min-height:500px; display:grid; align-items:end; background-image:linear-gradient(90deg, rgba(5,22,39,.89) 0%, rgba(5,22,39,.72) 45%, rgba(5,22,39,.14) 100%), url('assets/composite-frp/hero-composite.jpg'); background-position:center; background-size:cover; }
+    .hero-inner { width:min(1180px, calc(100% - 48px)); margin:0 auto; padding:80px 0 72px; color:#fff; }
+    .eyebrow { margin:0 0 13px; color:#f1d19c; font-size:12px; letter-spacing:1.8px; font-weight:700; }
+    h1 { max-width:680px; margin:0; font-family:Georgia, 'Times New Roman', serif; font-size:clamp(40px, 6vw, 70px); line-height:1.02; letter-spacing:0; }
+    .hero p { max-width:590px; margin:22px 0 30px; color:#f0f4f6; font-size:18px; }
+    .button { display:inline-block; padding:14px 21px; background:var(--gold); color:#fff; border-radius:4px; text-decoration:none; font-weight:700; }
+    .section { width:min(1180px, calc(100% - 48px)); margin:0 auto; padding:76px 0; }
+    .intro { display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:start; }
+    .section-tag { color:#a26f29; font-size:12px; font-weight:700; letter-spacing:1.5px; }
+    h2 { margin:8px 0 18px; font-family:Georgia, 'Times New Roman', serif; font-size:clamp(31px, 4vw, 46px); line-height:1.12; }
+    .intro p { margin:0; color:#506176; font-size:17px; }
+    .stats { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line); }
+    .stat { min-height:126px; padding:22px; background:#fff; }
+    .stat strong { display:block; color:var(--navy); font-size:29px; }
+    .stat span { display:block; margin-top:8px; color:#617084; font-size:13px; }
+    .band { background:var(--navy); color:#fff; }
+    .band .section { padding:70px 0; }
+    .band h2 { color:#fff; }
+    .band .lead { max-width:690px; color:#d6e0e9; font-size:17px; }
+    .benefits { margin-top:32px; display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#294967; }
+    .benefit { padding:25px 22px; background:#0c2947; }
+    .benefit b { display:block; margin-bottom:8px; color:#f2ce91; font-size:16px; }
+    .benefit span { color:#d6e0e9; font-size:14px; }
+    .product-head { display:flex; align-items:end; justify-content:space-between; gap:24px; }
+    .product-head p { max-width:530px; margin:0; color:#596a7d; }
+    .products { margin-top:31px; display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .product { overflow:hidden; background:#fff; border:1px solid var(--line); }
+    .product img { width:100%; height:230px; display:block; object-fit:cover; background:#e8ebed; }
+    .product-body { padding:20px; }
+    .product-body h3 { margin:0 0 7px; font-size:20px; }
+    .product-body p { margin:0; color:#68778a; font-size:14px; }
+    .applications { display:grid; grid-template-columns:1fr 1.1fr; gap:40px; align-items:stretch; }
+    .application-photo { min-height:360px; background:url('assets/composite-frp/frp-5-song.jpg') center/cover; }
+    .application-copy { padding:46px; background:#fff; border-left:4px solid var(--gold); }
+    .application-copy h2 { font-size:37px; }
+    .application-list { padding:0; margin:24px 0 0; list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:13px; }
+    .application-list li { color:#526174; font-weight:700; font-size:14px; }
+    .application-list li::before { content:'+'; color:#b87e2c; font-size:17px; margin-right:7px; }
+    .cta { padding:66px 24px; background:#ece5d8; text-align:center; }
+    .cta h2 { margin-bottom:12px; font-size:42px; }
+    .cta p { margin:0 auto 25px; max-width:600px; color:#586577; }
+    footer { padding:34px 24px; background:var(--navy); color:#c9d2dd; text-align:center; font-size:13px; }
+    footer b { display:block; color:#fff; margin-bottom:7px; letter-spacing:.6px; }
+    @media (max-width:900px) { .site-header { gap:14px; } nav { gap:14px; } nav a { font-size:12px; } .brand { min-width:auto; } .quote { padding:11px 13px; font-size:13px; } .intro, .applications { grid-template-columns:1fr; gap:28px; } .benefits { grid-template-columns:1fr 1fr; } .products { grid-template-columns:1fr 1fr; } }
+    @media (max-width:650px) { .site-header { padding:10px 18px; } .brand small { display:none; } nav { display:none; } .quote { margin-left:auto; } .hero { min-height:460px; background-position:56% center; } .hero-inner, .section { width:min(100% - 36px, 1180px); } .hero-inner { padding:70px 0 54px; } .hero p { font-size:16px; } .section { padding:55px 0; } .benefits, .products, .application-list { grid-template-columns:1fr; } .product img { height:215px; } .application-copy { padding:31px 25px; } .application-copy h2, .cta h2 { font-size:32px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="HD Luxury - Trang chủ">
+      <span class="brand-mark">HD</span><span><strong>HD LUXURY</strong><small>KIẾN TẠO GIÁ TRỊ BỀN VỮNG</small></span>
+    </a>
+    <nav aria-label="Điều hướng chính">
+      <a href="index.html">Trang chủ</a><a href="top-asia.html">Top Asia</a><a href="khoi-thanh.html">Tôn nhựa ngói PVC/ASA</a><a class="active" href="composite-frp.html">Composite FRP</a><a href="lien-he.html">Liên hệ</a>
+    </nav>
+    <a class="quote" href="lien-he.html">Nhận báo giá</a>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">HD LUXURY / VẬT LIỆU HỆ SINH THÁI</p>
+        <h1>LUXURY PRIME<br>Tấm lợp lấy sáng Composite FRP</h1>
+        <p>Giải pháp tấm lợp composite cho các công trình cần độ bền, khả năng chống ăn mòn và hiệu quả lấy sáng tự nhiên.</p>
+        <a class="button" href="lien-he.html">Tư vấn sản phẩm</a>
+      </div>
+    </section>
+    <section class="section intro">
+      <div>
+        <span class="section-tag">01 / GIỚI THIỆU</span>
+        <h2>Vật liệu linh hoạt cho công trình hiện đại</h2>
+        <p>Tấm lợp lấy sáng Composite FRP thuộc hệ sản phẩm LUXURY PRIME, phù hợp cho mái che, nhà xưởng, khu sản xuất, trang trại và nhiều hạng mục dân dụng. Sản phẩm được tư vấn theo điều kiện sử dụng, quy cách và yêu cầu công trình thực tế.</p>
+      </div>
+      <div class="stats" aria-label="Thông tin sản phẩm">
+        <div class="stat"><strong>FRP</strong><span>Composite gia cường sợi thủy tinh</span></div>
+        <div class="stat"><strong>Tùy chọn</strong><span>Quy cách, màu sắc và độ dày theo nhu cầu</span></div>
+        <div class="stat"><strong>Ứng dụng rộng</strong><span>Dân dụng, công nghiệp và nông nghiệp</span></div>
+        <div class="stat"><strong>Đồng bộ</strong><span>Tư vấn phụ kiện, thi công và bảo hành</span></div>
+      </div>
+    </section>
+    <section class="band">
+      <div class="section">
+        <span class="section-tag" style="color:#f2ce91">02 / ƯU ĐIỂM</span>
+        <h2>Chủ động bảo vệ công trình</h2>
+        <p class="lead">Lựa chọn vật liệu được định hướng theo môi trường sử dụng, yêu cầu ánh sáng và khả năng chịu tác động của từng mái che.</p>
+        <div class="benefits">
+          <div class="benefit"><b>Kháng ăn mòn</b><span>Phù hợp các khu vực ẩm, có hơi muối hoặc tác động hóa chất.</span></div>
+          <div class="benefit"><b>Lấy sáng tự nhiên</b><span>Giúp tận dụng ánh sáng ban ngày cho không gian sử dụng.</span></div>
+          <div class="benefit"><b>Nhẹ, dễ thi công</b><span>Thuận tiện vận chuyển, cắt ghép và xử lý theo quy cách mái.</span></div>
+          <div class="benefit"><b>Đa dạng dạng sóng</b><span>Có thể tư vấn theo thiết kế, khẩu độ và hạng mục công trình.</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="san-pham">
+      <div class="product-head"><div><span class="section-tag">03 / DANH MỤC</span><h2>Các dòng tấm lợp Composite</h2></div><p>Hình dạng và quy cách được lựa chọn để tương thích với hệ mái, nhu cầu lấy sáng và giải pháp thi công của từng công trình.</p></div>
+      <div class="products">
+        <article class="product"><img src="assets/composite-frp/frp-11-song.jpg" alt="Tấm lợp Composite 11 sóng"><div class="product-body"><h3>Tấm lợp 11 sóng</h3><p>Giải pháp lấy sáng phổ biến cho nhà xưởng và mái che dân dụng.</p></div></article>
+        <article class="product"><img src="assets/composite-frp/frp-5-song.jpg" alt="Tấm lợp Composite 5 sóng"><div class="product-body"><h3>Tấm lợp 5 sóng</h3><p>Phù hợp các hạng mục công nghiệp cần khả năng che phủ hiệu quả.</p></div></article>
+        <article class="product"><img src="assets/composite-frp/frp-seamlock.jpg" alt="Tấm lợp Composite seam lock"><div class="product-body"><h3>Seam lock và quy cách khác</h3><p>Đồng bộ theo thiết kế mái, tư vấn trước khi đặt hàng và thi công.</p></div></article>
+      </div>
+    </section>
+    <section class="section applications">
+      <div class="application-photo" role="img" aria-label="Mẫu tấm lợp Composite FRP"></div>
+      <div class="application-copy"><span class="section-tag">04 / ỨNG DỤNG</span><h2>Giải pháp cho nhiều không gian</h2><p>Từ hạng mục lấy sáng dân dụng đến mái che sản xuất, LUXURY PRIME lựa chọn quy cách phù hợp với nhu cầu và ngân sách của từng công trình.</p><ul class="application-list"><li>Nhà xưởng, kho bãi</li><li>Trang trại chăn nuôi</li><li>Mái che sân vườn</li><li>Khu vực ven biển</li><li>Nhà để xe, hành lang</li><li>Không gian sản xuất</li></ul></div>
+    </section>
+    <section class="cta"><span class="section-tag">HD LUXURY</span><h2>Cần tư vấn tấm lợp Composite?</h2><p>Gửi yêu cầu để nhận tư vấn về mẫu sản phẩm, quy cách và phương án phù hợp cho công trình của bạn.</p><a class="button" href="lien-he.html">Gửi yêu cầu báo giá</a></section>
+  </main>
+  <footer><b>HD LUXURY | TỔNG KHO HẠNH DUNG</b>Tấm lợp lấy sáng Composite FRP - LUXURY PRIME</footer>
+</body>
+</html>
