@@ -66,6 +66,56 @@
     @media (max-width:900px) { .site-header { gap:14px; } nav { gap:14px; } nav a { font-size:12px; } .brand { min-width:auto; } .quote { padding:11px 13px; font-size:13px; } .intro, .applications { grid-template-columns:1fr; gap:28px; } .benefits { grid-template-columns:1fr 1fr; } .products { grid-template-columns:1fr 1fr; } }
     @media (max-width:650px) { .site-header { padding:10px 18px; } .brand small { display:none; } nav { display:none; } .quote { margin-left:auto; } .hero { min-height:460px; background-position:56% center; } .hero-inner, .section { width:min(100% - 36px, 1180px); } .hero-inner { padding:70px 0 54px; } .hero p { font-size:16px; } .section { padding:55px 0; } .benefits, .products, .application-list { grid-template-columns:1fr; } .product img { height:215px; } .application-copy { padding:31px 25px; } .application-copy h2, .cta h2 { font-size:32px; } }
   </style>
+  <style id="composite-header-layout-fix">
+    /* Keep the Composite FRP brand block within the desktop navigation area. */
+    @media (min-width: 721px) {
+      .site-header,
+      .main-header,
+      header {
+        overflow: hidden;
+      }
+
+      .site-header .container,
+      .main-header .container,
+      header .container,
+      .site-header .header-inner,
+      .main-header .header-inner,
+      header .header-inner,
+      .site-header .nav-wrap,
+      .main-header .nav-wrap,
+      header .nav-wrap {
+        box-sizing: border-box;
+        width: calc(100% - 32px) !important;
+        max-width: 1280px !important;
+        min-width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        transform: none !important;
+      }
+
+      .site-header .brand,
+      .main-header .brand,
+      header .brand,
+      .site-header .header-brand,
+      .main-header .header-brand,
+      header .header-brand,
+      .site-header .navbar-brand,
+      .main-header .navbar-brand,
+      header .navbar-brand,
+      .site-header .brand-block,
+      .main-header .brand-block,
+      header .brand-block,
+      .site-header .logo-wrap,
+      .main-header .logo-wrap,
+      header .logo-wrap {
+        left: auto !important;
+        margin-left: 0 !important;
+        transform: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -127,5 +177,271 @@
     <section class="cta"><span class="section-tag">HD LUXURY</span><h2>Cần tư vấn tấm lợp Composite?</h2><p>Gửi yêu cầu để nhận tư vấn về mẫu sản phẩm, quy cách và phương án phù hợp cho công trình của bạn.</p><a class="button" href="lien-he.html">Gửi yêu cầu báo giá</a></section>
   </main>
   <footer><b>HD LUXURY | TỔNG KHO HẠNH DUNG</b>Tấm lợp lấy sáng Composite FRP - LUXURY PRIME</footer>
+  <style>
+    .klip-lock-photo-panel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      min-height: 260px;
+      padding: 18px;
+      box-sizing: border-box;
+      background: #ffffff;
+      border: 1px solid #dce4ed;
+      border-radius: 6px;
+    }
+
+    .klip-lock-photo-panel img {
+      display: block;
+      width: 100%;
+      max-width: 520px;
+      max-height: 390px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 720px) {
+      .klip-lock-photo-panel {
+        min-height: 200px;
+        padding: 12px;
+      }
+
+      .klip-lock-photo-panel img {
+        max-height: 280px;
+      }
+    }
+  </style>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      if (document.querySelector(".klip-lock-photo-panel")) return;
+
+      var heading = Array.prototype.find.call(
+        document.querySelectorAll("h1, h2, h3, h4, h5, h6, strong, p"),
+        function (element) {
+          return element.textContent.trim().indexOf("Seam lock và quy cách khác") !== -1;
+        }
+      );
+
+      if (!heading) return;
+
+      var node = heading;
+      var emptyPanel = null;
+
+      while (node.parentElement && node.parentElement !== document.body) {
+        var siblings = Array.prototype.filter.call(node.parentElement.children, function (element) {
+          return element !== node &&
+            element.nodeType === 1 &&
+            !element.textContent.trim() &&
+            !element.querySelector("img, video, picture, svg, canvas");
+        });
+
+        if (siblings.length) {
+          emptyPanel = siblings[0];
+          break;
+        }
+
+        node = node.parentElement;
+      }
+
+      if (!emptyPanel) return;
+
+      emptyPanel.classList.add("klip-lock-photo-panel");
+      emptyPanel.innerHTML =
+        '<img src="assets/composite-klip-lock.jpg" alt="Tấm lợp composite Klip Lock Luxury Prime">';
+    });
+  </script>
+  <style>
+    .frp-accessory-showcase {
+      padding: 72px 24px;
+      background: #f3f7fb;
+    }
+
+    .frp-accessory-showcase__inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .frp-accessory-showcase__eyebrow {
+      margin: 0 0 8px;
+      color: #b98236;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .frp-accessory-showcase h2 {
+      margin: 0;
+      color: #0b233e;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+
+    .frp-accessory-showcase__intro {
+      max-width: 680px;
+      margin: 12px 0 28px;
+      color: #4b6073;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .frp-accessory-showcase__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .frp-accessory-showcase__card {
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #d6e0e8;
+      border-radius: 6px;
+      box-shadow: 0 10px 26px rgba(11, 35, 62, 0.08);
+    }
+
+    .frp-accessory-showcase__image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      box-sizing: border-box;
+      padding: 10px;
+      object-fit: contain;
+      background: #f7f9fb;
+    }
+
+    .frp-accessory-showcase__content {
+      padding: 22px;
+    }
+
+    .frp-accessory-showcase h3 {
+      margin: 0 0 8px;
+      color: #0b233e;
+      font-size: 21px;
+      line-height: 1.3;
+    }
+
+    .frp-accessory-showcase p {
+      margin: 0;
+      color: #53677a;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 720px) {
+      .frp-accessory-showcase {
+        padding: 52px 18px;
+      }
+
+      .frp-accessory-showcase h2 {
+        font-size: 28px;
+      }
+
+      .frp-accessory-showcase__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .frp-accessory-showcase__content {
+        padding: 18px;
+      }
+    }
+  </style>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      if (document.querySelector(".frp-accessory-showcase")) return;
+
+      var showcase = document.createElement("section");
+      showcase.className = "frp-accessory-showcase";
+      showcase.setAttribute("aria-labelledby", "frp-accessory-title");
+      showcase.innerHTML =
+        '<div class="frp-accessory-showcase__inner">' +
+          '<p class="frp-accessory-showcase__eyebrow">DANH MỤC PHỤ KIỆN</p>' +
+          '<h2 id="frp-accessory-title">Phụ kiện Composite FRP</h2>' +
+          '<p class="frp-accessory-showcase__intro">Đồng bộ máng thoát nước, úp nóc và phụ kiện hoàn thiện cho công trình.</p>' +
+          '<div class="frp-accessory-showcase__grid">' +
+            '<article class="frp-accessory-showcase__card">' +
+              '<img class="frp-accessory-showcase__image" src="assets/composite-phu-kien-mang-ban-nguyet.jpg" alt="Máng bán nguyệt hai tai và máng vuông hai tai Composite FRP">' +
+              '<div class="frp-accessory-showcase__content">' +
+                '<h3>Máng bán nguyệt và máng vuông hai tai</h3>' +
+                '<p>Phù hợp hệ thống thu và dẫn nước mái; sản xuất theo kích thước thiết kế.</p>' +
+              '</div>' +
+            '</article>' +
+            '<article class="frp-accessory-showcase__card">' +
+              '<img class="frp-accessory-showcase__image" src="assets/composite-phu-kien-mang-vuong.jpg" alt="Máng vuông không tai, cút thu nước và úp nóc Composite FRP">' +
+              '<div class="frp-accessory-showcase__content">' +
+                '<h3>Máng vuông không tai, cút thu nước và úp nóc</h3>' +
+                '<p>Hoàn thiện đồng bộ cho mái lợp Composite FRP, tối ưu thoát nước và tính thẩm mỹ.</p>' +
+              '</div>' +
+            '</article>' +
+          '</div>' +
+        '</div>';
+
+      var heading = Array.prototype.find.call(
+        document.querySelectorAll("h1, h2, h3, h4, h5, h6, strong, p"),
+        function (element) {
+          return element.textContent.trim().toLowerCase().indexOf("phụ kiện") !== -1;
+        }
+      );
+
+      var target = heading;
+      while (target && target.parentElement && target.parentElement !== document.body) {
+        if (target.parentElement.tagName === "SECTION") {
+          target = target.parentElement;
+          break;
+        }
+        target = target.parentElement;
+      }
+
+      if (target && target.parentElement) {
+        target.insertAdjacentElement("afterend", showcase);
+        return;
+      }
+
+      var main = document.querySelector("main");
+      (main || document.body).appendChild(showcase);
+    });
+  </script>
+  <section class="frp-accessory-direct" id="frp-accessories-gallery" aria-labelledby="frp-accessory-direct-title">
+    <div class="frp-accessory-direct__inner">
+      <div class="frp-accessory-direct__heading">
+        <span>DANH MỤC PHỤ KIỆN</span>
+        <h2 id="frp-accessory-direct-title">Phụ kiện Composite FRP</h2>
+        <p>Đồng bộ máng thoát nước, úp nóc và phụ kiện hoàn thiện cho công trình.</p>
+      </div>
+      <div class="frp-accessory-direct__grid">
+        <article class="frp-accessory-direct__card">
+          <img src="assets/composite-phu-kien-mang-ban-nguyet.jpg" alt="Máng bán nguyệt hai tai và máng vuông hai tai Composite FRP">
+          <div>
+            <h3>Máng bán nguyệt và máng vuông hai tai</h3>
+            <p>Giải pháp dẫn và thu nước đồng bộ, phù hợp theo từng phương án mái.</p>
+          </div>
+        </article>
+        <article class="frp-accessory-direct__card">
+          <img src="assets/composite-phu-kien-mang-vuong.jpg" alt="Máng vuông không tai, cút thu nước và úp nóc Composite FRP">
+          <div>
+            <h3>Máng vuông không tai, cút thu nước và úp nóc</h3>
+            <p>Hoàn thiện các vị trí liên kết, bảo đảm hệ mái gọn gàng và đồng bộ.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <style>
+    .frp-accessory-direct { padding: 72px 24px; background: #f3f7fb; }
+    .frp-accessory-direct__inner { max-width: 1180px; margin: 0 auto; }
+    .frp-accessory-direct__heading { max-width: 720px; margin: 0 auto 28px; text-align: center; color: #0b2139; }
+    .frp-accessory-direct__heading span { display: inline-block; color: #bd8a4b; font-weight: 700; font-size: 13px; letter-spacing: 0; }
+    .frp-accessory-direct__heading h2 { margin: 8px 0; font-size: 34px; letter-spacing: 0; }
+    .frp-accessory-direct__heading p { margin: 0; color: #56677a; }
+    .frp-accessory-direct__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .frp-accessory-direct__card { overflow: hidden; background: #fff; border: 1px solid #dbe3ea; border-radius: 8px; box-shadow: 0 8px 24px rgba(11, 33, 57, .08); }
+    .frp-accessory-direct__card img { display: block; width: 100%; height: 360px; object-fit: cover; object-position: top; background: #fff; }
+    .frp-accessory-direct__card div { padding: 22px; }
+    .frp-accessory-direct__card h3 { margin: 0 0 8px; color: #0b2139; font-size: 21px; line-height: 1.3; letter-spacing: 0; }
+    .frp-accessory-direct__card p { margin: 0; color: #5d6c7d; line-height: 1.6; }
+    @media (max-width: 720px) {
+      .frp-accessory-direct { padding: 48px 16px; }
+      .frp-accessory-direct__heading h2 { font-size: 28px; }
+      .frp-accessory-direct__grid { grid-template-columns: 1fr; }
+      .frp-accessory-direct__card img { height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+    }
+  </style>
 </body>
 </html>
