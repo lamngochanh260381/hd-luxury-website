@@ -1,7 +1,22 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
   window.addEventListener('scroll', () => header?.classList.toggle('scrolled', window.scrollY > 30));
-  document.querySelector('.mobile-toggle')?.addEventListener('click', () => document.querySelector('.navlinks')?.classList.toggle('open'));
+  const mobileToggle = document.querySelector('.mobile-toggle');
+  const mobileNav = document.querySelector('.navlinks');
+  mobileToggle?.addEventListener('click', () => {
+    const isOpen = mobileNav?.classList.toggle('open') || false;
+    mobileToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  mobileNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+    mobileToggle?.setAttribute('aria-expanded', 'false');
+  }));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      mobileNav?.classList.remove('open');
+      mobileToggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
   const search = document.querySelector('#productSearch');
   const cards = [...document.querySelectorAll('.product-card')];
   search?.addEventListener('input', event => {
@@ -13,7 +28,12 @@
     button.classList.add('active');
     cards.forEach(card => card.style.display = button.dataset.filter === 'all' || card.dataset.category === button.dataset.filter ? 'block' : 'none');
   }));
-  document.querySelectorAll('form').forEach(form => form.addEventListener('submit', event => {
+  const productInterest = document.querySelector('#productInterest');
+  const requestedProduct = new URLSearchParams(window.location.search).get('san-pham');
+  if (productInterest && requestedProduct && [...productInterest.options].some(option => option.value === requestedProduct)) {
+    productInterest.value = requestedProduct;
+  }
+  document.querySelectorAll('form:not([data-live-form])').forEach(form => form.addEventListener('submit', event => {
     event.preventDefault();
     alert('Cảm ơn Quý khách. HD LUXURY sẽ liên hệ trong thời gian sớm nhất.');
     form.reset();
@@ -47,4 +67,19 @@ document.querySelectorAll('.navlinks').forEach(nav => {
   const topAsiaLink = nav.querySelector('a[href="top-asia.html"]');
   const pvcAsaLink = nav.querySelector('a[href="khoi-thanh.html"]');
   if (topAsiaLink && pvcAsaLink) nav.insertBefore(topAsiaLink, pvcAsaLink);
+  if (!nav.querySelector('a[href="composite-frp.html"]')) {
+    const compositeLink = document.createElement('a');
+    compositeLink.href = 'composite-frp.html';
+    compositeLink.textContent = 'Composite FRP';
+    const newsLink = nav.querySelector('a[href="tin-tuc.html"]');
+    nav.insertBefore(compositeLink, newsLink || null);
+  }
+});
+
+document.querySelectorAll('footer').forEach(footer => {
+  if (footer.querySelector('.footer-contact') || footer.textContent.includes('info@hdluxury.vn')) return;
+  const contact = document.createElement('div');
+  contact.className = 'footer-contact';
+  contact.innerHTML = '<a href="composite-frp.html">Composite FRP</a><span>·</span><a href="mailto:info@hdluxury.vn">info@hdluxury.vn</a><span>·</span><a href="tel:0978934420">Hotline/Zalo: 0978 934 420</a><span>·</span><a href="https://hdluxury.vn/">hdluxury.vn</a>';
+  footer.appendChild(contact);
 });

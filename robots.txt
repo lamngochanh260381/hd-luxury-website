@@ -1,5 +1,4 @@
 ﻿User-agent: *
 Allow: /
-Sitemap: https://lamngochanh260381.github.io/hd-luxury-website/sitemap.xml
-
+Sitemap: https://hdluxury.vn/sitemap.xml
 
