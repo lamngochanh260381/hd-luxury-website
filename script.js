@@ -83,3 +83,14 @@ document.querySelectorAll('footer').forEach(footer => {
   contact.innerHTML = '<a href="composite-frp.html">Composite FRP</a><span>·</span><a href="mailto:info@hdluxury.vn">info@hdluxury.vn</a><span>·</span><a href="tel:0978934420">Hotline/Zalo: 0978 934 420</a><span>·</span><a href="https://hdluxury.vn/">hdluxury.vn</a>';
   footer.appendChild(contact);
 });
+
+
+document.querySelectorAll('.navlinks').forEach(nav => {
+  if (!nav.querySelector('a[href="ton-nhom.html"]')) {
+    const link = document.createElement('a');
+    link.href = 'ton-nhom.html';
+    link.textContent = 'Tôn nhôm';
+    const newsLink = nav.querySelector('a[href="tin-tuc.html"]');
+    nav.insertBefore(link, newsLink || null);
+  }
+});
