@@ -94,3 +94,14 @@ document.querySelectorAll('.navlinks').forEach(nav => {
     nav.insertBefore(link, newsLink || null);
   }
 });
+
+
+// Chuẩn hóa liên kết bốn ngành hàng trong footer trên mọi trang.
+document.querySelectorAll('footer').forEach(footer => {
+  if (footer.querySelector('.standard-product-footer-links')) return;
+  const links = document.createElement('nav');
+  links.className = 'container standard-product-footer-links';
+  links.setAttribute('aria-label', 'Bốn ngành hàng HD LUXURY');
+  links.innerHTML = '<a href="top-asia.html">Top Asia</a><a href="khoi-thanh.html">Tôn nhựa ngói PVC/ASA</a><a href="composite-frp.html">Composite FRP</a><a href="ton-nhom.html">Tôn nhôm</a><a href="lien-he.html">Liên hệ tư vấn</a>';
+  footer.appendChild(links);
+});
