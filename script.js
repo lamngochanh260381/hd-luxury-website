@@ -83,3 +83,25 @@ document.querySelectorAll('footer').forEach(footer => {
   contact.innerHTML = '<a href="composite-frp.html">Composite FRP</a><span>·</span><a href="mailto:info@hdluxury.vn">info@hdluxury.vn</a><span>·</span><a href="tel:0978934420">Hotline/Zalo: 0978 934 420</a><span>·</span><a href="https://hdluxury.vn/">hdluxury.vn</a>';
   footer.appendChild(contact);
 });
+
+
+document.querySelectorAll('.navlinks').forEach(nav => {
+  if (!nav.querySelector('a[href="ton-nhom.html"]')) {
+    const link = document.createElement('a');
+    link.href = 'ton-nhom.html';
+    link.textContent = 'Tôn nhôm';
+    const newsLink = nav.querySelector('a[href="tin-tuc.html"]');
+    nav.insertBefore(link, newsLink || null);
+  }
+});
+
+
+// Chuẩn hóa liên kết bốn ngành hàng trong footer trên mọi trang.
+document.querySelectorAll('footer').forEach(footer => {
+  if (footer.querySelector('.standard-product-footer-links')) return;
+  const links = document.createElement('nav');
+  links.className = 'container standard-product-footer-links';
+  links.setAttribute('aria-label', 'Bốn ngành hàng HD LUXURY');
+  links.innerHTML = '<a href="top-asia.html">Top Asia</a><a href="khoi-thanh.html">Tôn nhựa ngói PVC/ASA</a><a href="composite-frp.html">Composite FRP</a><a href="ton-nhom.html">Tôn nhôm</a><a href="lien-he.html">Liên hệ tư vấn</a>';
+  footer.appendChild(links);
+});

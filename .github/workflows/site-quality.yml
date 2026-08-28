@@ -1,0 +1,21 @@
+name: Site quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - feat/danh-muc-ton-nhom
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: node --check script.js
+      - name: Check product pages and local links
+        run: python tools/check_site.py
