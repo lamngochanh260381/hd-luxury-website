@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="HD LUXURY logo">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d7b36b"/>
+      <stop offset="50%" stop-color="#b88a55"/>
+      <stop offset="100%" stop-color="#d7b36b"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0 12)">
+    <path d="M130 270 A150 150 0 0 1 430 270" fill="none" stroke="url(#gold)" stroke-width="22" stroke-linecap="round"/>
+    <path d="M220 120 h75 v220 h90 V120 h75 v300 h-240 V120 Z" fill="#071b34"/>
+    <path d="M420 120 h75 v300 h-75 V120 Z" fill="#071b34"/>
+    <path d="M245 120 h75 v300 h-75 V120 Z" fill="#071b34"/>
+    <path d="M328 120 L468 330 L520 330 L380 120 Z" fill="url(#gold)"/>
+  </g>
+  <text x="620" y="250" font-family="'Segoe UI', Arial, sans-serif" font-size="150" font-weight="800" letter-spacing="-10" fill="#071b34">HD</text>
+  <text x="620" y="340" font-family="'Segoe UI', Arial, sans-serif" font-size="70" font-weight="700" letter-spacing="8" fill="#071b34">LUXURY</text>
+</svg>

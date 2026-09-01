@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="HD LUXURY logo mark">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d7b36b"/>
+      <stop offset="50%" stop-color="#b88a55"/>
+      <stop offset="100%" stop-color="#d7b36b"/>
+    </linearGradient>
+  </defs>
+  <path d="M120 380 A180 180 0 0 1 480 380" fill="none" stroke="url(#gold)" stroke-width="26" stroke-linecap="round"/>
+  <g fill="#071b34">
+    <path d="M165 150h78v220h96V150h78v300h-252V150zm120 0h78v300h-78V150z" opacity="0.95"/>
+    <path d="M370 150h78v300h-78V150zm-28 0h78v300h-78V150z" opacity="0.95"/>
+  </g>
+  <path d="M258 166 L395 388 L440 388 L302 166 Z" fill="url(#gold)"/>
+  <path d="M208 162h82v300h-82z" fill="#071b34" opacity="0.97"/>
+  <path d="M372 162h82v300h-82z" fill="#071b34" opacity="0.97"/>
+  <path d="M268 162h82v300h-82z" fill="#071b34" opacity="0.97"/>
+</svg>

@@ -63,17 +63,20 @@ if (cooperationImages && !cooperationImages.querySelector('[src="assets/hop-tac-
   cooperationImages.append(topAsiaImage);
 }
 
+const standardNavigation = [
+  ['index.html', 'Trang chủ'],
+  ['top-asia.html', 'Top Asia'],
+  ['khoi-thanh.html', 'Tôn nhựa ngói PVC/ASA'],
+  ['composite-frp.html', 'Composite FRP'],
+  ['ton-nhom.html', 'Tôn nhôm'],
+  ['tin-tuc.html', 'Tin tức'],
+  ['lien-he.html', 'Liên hệ']
+];
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.navlinks').forEach(nav => {
-  const topAsiaLink = nav.querySelector('a[href="top-asia.html"]');
-  const pvcAsaLink = nav.querySelector('a[href="khoi-thanh.html"]');
-  if (topAsiaLink && pvcAsaLink) nav.insertBefore(topAsiaLink, pvcAsaLink);
-  if (!nav.querySelector('a[href="composite-frp.html"]')) {
-    const compositeLink = document.createElement('a');
-    compositeLink.href = 'composite-frp.html';
-    compositeLink.textContent = 'Composite FRP';
-    const newsLink = nav.querySelector('a[href="tin-tuc.html"]');
-    nav.insertBefore(compositeLink, newsLink || null);
-  }
+  nav.innerHTML = standardNavigation.map(([href, label]) =>
+    `<a href="${href}"${currentPage === href ? ' class="active"' : ''}>${label}</a>`
+  ).join('');
 });
 
 document.querySelectorAll('footer').forEach(footer => {
@@ -82,17 +85,6 @@ document.querySelectorAll('footer').forEach(footer => {
   contact.className = 'footer-contact';
   contact.innerHTML = '<a href="composite-frp.html">Composite FRP</a><span>·</span><a href="mailto:info@hdluxury.vn">info@hdluxury.vn</a><span>·</span><a href="tel:0978934420">Hotline/Zalo: 0978 934 420</a><span>·</span><a href="https://hdluxury.vn/">hdluxury.vn</a>';
   footer.appendChild(contact);
-});
-
-
-document.querySelectorAll('.navlinks').forEach(nav => {
-  if (!nav.querySelector('a[href="ton-nhom.html"]')) {
-    const link = document.createElement('a');
-    link.href = 'ton-nhom.html';
-    link.textContent = 'Tôn nhôm';
-    const newsLink = nav.querySelector('a[href="tin-tuc.html"]');
-    nav.insertBefore(link, newsLink || null);
-  }
 });
 
 

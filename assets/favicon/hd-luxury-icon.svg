@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="HD LUXURY icon">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d7b36b"/>
+      <stop offset="50%" stop-color="#b88a55"/>
+      <stop offset="100%" stop-color="#d7b36b"/>
+    </linearGradient>
+  </defs>
+  <path d="M60 260 A196 196 0 0 1 452 260" fill="none" stroke="url(#gold)" stroke-width="28" stroke-linecap="round"/>
+  <path d="M158 128h70v175h80V128h70v255h-220V128zm110 0h70v255h-70V128z" fill="#071b34"/>
+  <path d="M258 128h70v255h-70V128z" fill="#071b34"/>
+  <path d="M260 120 L390 320 L440 320 L310 120 Z" fill="url(#gold)"/>
+</svg>
