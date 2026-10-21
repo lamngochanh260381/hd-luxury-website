@@ -1,9 +1,9 @@
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-PRODUCT_PAGES = ["top-asia.html", "khoi-thanh.html", "composite-frp.html", "ton-nhom.html"]
+PRODUCT_PAGES = ["top-asia.html", "khoi-thanh.html", "composite-frp.html"]
 errors = []
 
 class AuditParser(HTMLParser):
@@ -41,7 +41,7 @@ for name in PRODUCT_PAGES:
     if parser.canonical != 1:
         errors.append(f"{name}: expected exactly one canonical link, found {parser.canonical}")
     for ref in parser.refs:
-        clean = urlsplit(ref).path
+        clean = unquote(urlsplit(ref).path)
         if not clean or ref.startswith(("http://", "https://", "mailto:", "tel:", "data:", "#", "javascript:")):
             continue
         target = (ROOT / clean).resolve()
@@ -56,4 +56,4 @@ for name in PRODUCT_PAGES:
 if errors:
     print("\n".join(errors))
     raise SystemExit(1)
-print("Site checks passed for four product pages.")
+print("Site checks passed for three product pages.")

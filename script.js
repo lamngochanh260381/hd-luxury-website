@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
   window.addEventListener('scroll', () => header?.classList.toggle('scrolled', window.scrollY > 30));
   const mobileToggle = document.querySelector('.mobile-toggle');
@@ -41,19 +41,6 @@
 });
 
 
-document.querySelectorAll('a[href="khoi-thanh.html"]').forEach(link => {
-  link.textContent = 'Tôn nhựa ngói PVC/ASA';
-});
-const khoiThanhHeading = document.querySelector('.business.khoi-thanh h2');
-if (khoiThanhHeading) khoiThanhHeading.innerHTML = 'Tôn nhựa ngói<br>PVC/ASA';
-const khoiThanhButton = document.querySelector('.business.khoi-thanh .btn-outline');
-if (khoiThanhButton) khoiThanhButton.textContent = 'Khám phá tôn nhựa PVC/ASA';
-
-const topAsiaEyebrow = document.querySelector('.business.top-asia .eyebrow');
-if (topAsiaEyebrow) topAsiaEyebrow.textContent = 'MẢNG 01 · LẤY SÁNG';
-const pvcAsaEyebrow = document.querySelector('.business.khoi-thanh .eyebrow');
-if (pvcAsaEyebrow) pvcAsaEyebrow.textContent = 'MẢNG 02 · HỆ MÁI';
-
 const cooperationImages = document.querySelector('.intro .image-frame');
 if (cooperationImages && !cooperationImages.querySelector('[src="assets/hop-tac-top-asia.jpg"]')) {
   const topAsiaImage = document.createElement('img');
@@ -65,11 +52,13 @@ if (cooperationImages && !cooperationImages.querySelector('[src="assets/hop-tac-
 
 const standardNavigation = [
   ['index.html', 'Trang chủ'],
-  ['top-asia.html', 'Top Asia'],
-  ['khoi-thanh.html', 'Tôn nhựa ngói PVC/ASA'],
+  ['gioi-thieu.html', 'Giới thiệu'],
+  ['san-pham.html', 'Sản phẩm'],
+  ['top-asia.html', 'Polycarbonate'],
   ['composite-frp.html', 'Composite FRP'],
-  ['ton-nhom.html', 'Tôn nhôm'],
+  ['khoi-thanh.html', 'PVC/ASA LUXURY PRIME'],
   ['tin-tuc.html', 'Tin tức'],
+  ['dai-ly.html', 'Đại lý'],
   ['lien-he.html', 'Liên hệ']
 ];
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -88,12 +77,12 @@ document.querySelectorAll('footer').forEach(footer => {
 });
 
 
-// Chuẩn hóa liên kết bốn ngành hàng trong footer trên mọi trang.
+// Chuẩn hóa liên kết ba ngành hàng trên mọi trang.
 document.querySelectorAll('footer').forEach(footer => {
   if (footer.querySelector('.standard-product-footer-links')) return;
   const links = document.createElement('nav');
   links.className = 'container standard-product-footer-links';
-  links.setAttribute('aria-label', 'Bốn ngành hàng HD LUXURY');
-  links.innerHTML = '<a href="top-asia.html">Top Asia</a><a href="khoi-thanh.html">Tôn nhựa ngói PVC/ASA</a><a href="composite-frp.html">Composite FRP</a><a href="ton-nhom.html">Tôn nhôm</a><a href="lien-he.html">Liên hệ tư vấn</a>';
+  links.setAttribute('aria-label', 'Ba ngành hàng HD LUXURY');
+  links.innerHTML = '<a href="top-asia.html">Polycarbonate</a><a href="composite-frp.html">Composite FRP</a><a href="khoi-thanh.html">PVC/ASA LUXURY PRIME</a><a href="lien-he.html">Liên hệ tư vấn</a>';
   footer.appendChild(links);
 });
