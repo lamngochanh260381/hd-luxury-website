@@ -28,3 +28,15 @@
 .frp-page .frp-application-gallery img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#f5f6f7}
 .frp-page .frp-application-gallery figcaption{padding:12px 14px;color:var(--navy);font-size:12px;font-weight:700;line-height:1.5}
 @media(max-width:700px){.frp-page .frp-application-gallery{grid-template-columns:1fr;gap:14px}.frp-page .frp-application-gallery figcaption{padding:11px 12px}}
+
+/* Footer social and contact links */
+.footer-social{display:flex;width:100%;justify-content:center;align-items:center;flex-wrap:nowrap;gap:clamp(2px,1.5vw,10px);margin:20px auto 0;padding:0 clamp(4px,3vw,20px)}
+.footer-social-link{width:48px;height:auto;aspect-ratio:1;min-width:0;max-width:48px;display:inline-flex;align-items:center;justify-content:center;flex:1 1 48px;border:1px solid #ffffff35;border-radius:50%;color:#d5dee7;background:transparent;transition:color .2s ease,border-color .2s ease,background-color .2s ease}
+.footer-social-link svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.footer-social-link:nth-child(2) svg,.footer-social-link:nth-child(3) svg,.footer-social-link:nth-child(5) svg{fill:currentColor;stroke:none}
+.footer-social-link .footer-social-cutout{fill:#061426;stroke:none}
+.footer-social-link:nth-child(6) svg{stroke-width:1.8}
+.footer-social-link:nth-child(4) circle{fill:currentColor;stroke:none}
+.footer-social-link:hover,.footer-social-link:focus-visible{color:#f0c990;border-color:#f0c990;background:#ffffff0d}
+.footer-social-link:focus-visible{outline:2px solid #f0c990;outline-offset:3px}
+.footer-social-pending{cursor:default;opacity:.72}
