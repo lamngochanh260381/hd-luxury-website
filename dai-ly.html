@@ -59,19 +59,21 @@
             <div><strong>34</strong><span>tỉnh, thành phố</span></div>
             <div><strong>24h</strong><span>phản hồi hồ sơ</span></div>
           </div>
-          <p><strong>Hotline/Zalo</strong><br><a href="tel:+84978934420">0978 934 420</a></p>
+          <p><strong>Hotline</strong><br><a href="tel:+84978934420">0978 934 420</a><br><strong>Zalo</strong><br><a href="https://zalo.me/0978934420" target="_blank" rel="noopener noreferrer">Nhắn tin qua Zalo</a></p>
           <p><strong>Email</strong><br><a href="mailto:info@hdluxury.vn">info@hdluxury.vn</a></p>
         </div>
         <div class="form-card">
           <h3>Đăng ký làm đại lý</h3>
-          <form class="quote-form" action="https://formsubmit.co/info@hdluxury.vn" method="POST" data-live-form>
+          <form id="dealerForm" class="quote-form" action="https://formsubmit.co/92bda9efa0ba7bed77e8da1212036f35" method="POST" data-live-form>
             <input type="hidden" name="_subject" value="Hồ sơ đăng ký đại lý mới từ hdluxury.vn">
             <input type="hidden" name="_next" value="https://hdluxury.vn/cam-on.html">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_url" value="https://hdluxury.vn/dai-ly.html">
             <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <label for="dealerName">Họ và tên / Tên doanh nghiệp</label>
-            <input class="field" id="dealerName" name="Họ và tên / Tên doanh nghiệp" autocomplete="name" required placeholder="Nguyễn Văn An / Công ty ABC">
+            <label for="dealerName">Họ và tên người liên hệ</label>
+            <input class="field" id="dealerName" name="Họ và tên người liên hệ" autocomplete="name" required placeholder="Nguyễn Văn An">
+            <label for="dealerAgency">Tên đại lý / doanh nghiệp</label>
+            <input class="field" id="dealerAgency" name="Tên đại lý / doanh nghiệp" autocomplete="organization" required placeholder="Tên đại lý hoặc doanh nghiệp">
             <label for="dealerPhone">Số điện thoại</label>
             <input class="field" id="dealerPhone" name="Số điện thoại" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9\x20\x2b\x28\x29\x2e\x2d]{8,20}" required placeholder="09xx xxx xxx">
             <label for="dealerEmail">Email</label>
@@ -86,10 +88,11 @@
               <option value="COMPOSITE FRP">COMPOSITE FRP · Tấm Composite cốt sợi thủy tinh</option>
               <option value="Nhiều danh mục">Nhiều danh mục</option>
             </select>
-            <label for="dealerBusiness">Mô hình kinh doanh và nhu cầu hợp tác</label>
-            <textarea class="field" id="dealerBusiness" name="Mô hình kinh doanh và nhu cầu hợp tác" rows="4" required placeholder="Khu vực hoạt động, mô hình kinh doanh và thông tin bạn muốn trao đổi"></textarea>
+            <label for="dealerBusiness">Nội dung đăng ký và thông tin doanh nghiệp</label>
+            <textarea class="field" id="dealerBusiness" name="Nội dung đăng ký và thông tin doanh nghiệp" rows="4" required placeholder="Khu vực hoạt động, mô hình kinh doanh và nhu cầu hợp tác"></textarea>
             <button class="btn" type="submit">Gửi hồ sơ đăng ký</button>
-            <p class="form-note">Hồ sơ được gửi tới <strong>info@hdluxury.vn</strong>. HD LUXURY sẽ trao đổi về khu vực, danh mục và chính sách thương mại cụ thể sau khi tiếp nhận; thông tin chỉ được sử dụng để liên hệ về đề nghị hợp tác.</p>
+            <p id="dealerFormStatus" class="form-note" role="status" aria-live="polite" hidden></p>
+            <p class="form-note">Hồ sơ được gửi tới bộ phận HD LUXURY qua FormSubmit. HD LUXURY sẽ trao đổi về khu vực, danh mục và chính sách thương mại cụ thể sau khi tiếp nhận; thông tin chỉ được sử dụng để liên hệ về đề nghị hợp tác.</p>
           </form>
         </div>
       </div>
@@ -118,6 +121,10 @@
       <a href="khoi-thanh.html">LUXURY PRIME · Tôn nhựa PVC/ASA</a>
     </nav>
   </footer>
+  <aside class="floating" aria-label="Liên hệ nhanh">
+    <a class="call" href="tel:0978934420" aria-label="Gọi HD LUXURY">☎</a>
+    <a class="zalo" href="https://zalo.me/0978934420" target="_blank" rel="noopener noreferrer" aria-label="Liên hệ qua Zalo">Z</a>
+  </aside>
   <script src="script.js"></script>
 </body>
 </html>
