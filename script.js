@@ -54,9 +54,9 @@ const standardNavigation = [
   ['index.html', 'Trang chủ'],
   ['gioi-thieu.html', 'Giới thiệu'],
   ['san-pham.html', 'Sản phẩm'],
-  ['top-asia.html', 'Polycarbonate'],
-  ['composite-frp.html', 'Composite FRP'],
-  ['khoi-thanh.html', 'PVC/ASA LUXURY PRIME'],
+  ['top-asia.html', 'ASIA LITE – ASIA GOLD'],
+  ['composite-frp.html', 'COMPOSITE FRP'],
+  ['khoi-thanh.html', 'LUXURY PRIME'],
   ['tin-tuc.html', 'Tin tức'],
   ['dai-ly.html', 'Đại lý'],
   ['lien-he.html', 'Liên hệ']
@@ -83,6 +83,6 @@ document.querySelectorAll('footer').forEach(footer => {
   const links = document.createElement('nav');
   links.className = 'container standard-product-footer-links';
   links.setAttribute('aria-label', 'Ba ngành hàng HD LUXURY');
-  links.innerHTML = '<a href="top-asia.html">Polycarbonate</a><a href="composite-frp.html">Composite FRP</a><a href="khoi-thanh.html">PVC/ASA LUXURY PRIME</a><a href="lien-he.html">Liên hệ tư vấn</a>';
+  links.innerHTML = '<a href="top-asia.html">ASIA LITE – ASIA GOLD · Tấm lấy sáng Polycarbonate</a><a href="khoi-thanh.html">LUXURY PRIME · Tôn nhựa PVC/ASA</a><a href="composite-frp.html">COMPOSITE FRP · Tấm Composite cốt sợi thủy tinh</a><a href="lien-he.html">Liên hệ tư vấn</a>';
   footer.appendChild(links);
 });
